@@ -32,6 +32,8 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt0Feedback)
 BuildRequires:  pkgconfig(nemonotifications-qt5)
 BuildRequires:  desktop-file-utils
+Obsoletes: fingerterm < 1.3.6-1.19.1
+Provides: fingerterm >= 1.3.6-1.19.1
 
 %description
 A terminal emulator with a custom virtual keyboard
@@ -59,6 +61,7 @@ rm -rf %{buildroot}
 # >> install pre
 # << install pre
 %qmake5_install
+ln -sf %{_bindir}/${name} %{buildroot}/%{_bindir}/fingerterm
 
 # >> install post
 # << install post

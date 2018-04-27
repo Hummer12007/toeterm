@@ -29,3 +29,7 @@ Files:
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
+Obsoletes:
+  - fingerterm < 1.3.6-1.19.1
+Provides:
+  - fingerterm >= 1.3.6-1.19.1
